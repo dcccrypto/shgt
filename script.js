@@ -18,13 +18,24 @@ function changeBackgroundVideo(videoSrc) {
     }, 600);
 }
 
+// Audio element
+const hoverSound = document.getElementById('hoverSound');
+
 // Event listeners for coin hover
 coinContainer.addEventListener('mouseenter', function() {
     changeBackgroundVideo('hell.mp4');
+    // Play dramatic music
+    hoverSound.currentTime = 0; // Start from beginning
+    hoverSound.play().catch(function(error) {
+        console.log('Audio autoplay failed:', error);
+    });
 });
 
 coinContainer.addEventListener('mouseleave', function() {
     changeBackgroundVideo('heaven.mp4');
+    // Stop and reset music
+    hoverSound.pause();
+    hoverSound.currentTime = 0;
 });
 
 // Ensure video plays on load
