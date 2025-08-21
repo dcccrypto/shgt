@@ -48,6 +48,12 @@ body, html {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 .social-link {
     display: flex;
     align-items: center;
@@ -84,37 +90,42 @@ body, html {
     z-index: 100;
 }
 
-.follow-button {
+.buy-button {
     font-family: 'Playfair Display', serif;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.1);
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    border: 2px solid rgba(255, 215, 0, 0.4);
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.5px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
 }
 
-.follow-button:hover {
-    background: rgba(255, 255, 255, 0.2);
+.buy-button:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.3) 100%);
     transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.6);
 }
 
-.follow-button img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
+.buy-button img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
+
+
 
 /* Background video styling */
 .background {
@@ -297,6 +308,10 @@ body, html {
         padding: 10px 18px;
     }
     
+    .social-links {
+        gap: 12px;
+    }
+    
     .social-link {
         width: 45px;
         height: 45px;
@@ -317,9 +332,14 @@ body, html {
         margin-top: 30px;
     }
     
-    .follow-button {
-        padding: 10px 20px;
-        font-size: 14px;
+    .buy-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    .buy-button img {
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -332,6 +352,10 @@ body, html {
         font-size: 16px;
         padding: 8px 15px;
         letter-spacing: 1.5px;
+    }
+    
+    .social-links {
+        gap: 10px;
     }
     
     .social-link {
@@ -367,14 +391,14 @@ body, html {
         font-size: 11px;
     }
     
-    .follow-button {
-        padding: 8px 16px;
-        font-size: 13px;
+    .buy-button {
+        padding: 10px 20px;
+        font-size: 14px;
     }
     
-    .follow-button img {
-        width: 18px;
-        height: 18px;
+    .buy-button img {
+        width: 22px;
+        height: 22px;
     }
 }
 
@@ -387,6 +411,10 @@ body, html {
         font-size: 14px;
         padding: 6px 12px;
         letter-spacing: 1px;
+    }
+    
+    .social-links {
+        gap: 8px;
     }
     
     .social-link {
@@ -421,14 +449,14 @@ body, html {
         font-size: 10px;
     }
     
-    .follow-button {
-        padding: 6px 12px;
-        font-size: 12px;
+    .buy-button {
+        padding: 8px 16px;
+        font-size: 13px;
     }
     
-    .follow-button img {
-        width: 16px;
-        height: 16px;
+    .buy-button img {
+        width: 20px;
+        height: 20px;
     }
 }
 

@@ -29,9 +29,14 @@
     <!-- Header -->
     <div class="header">
         <div class="logo">SHGT - Side Hoe Government Token</div>
-        <a href="https://x.com/shgt" class="social-link" target="_blank">
-            <img src="x.svg" alt="X">
-        </a>
+        <div class="social-links">
+            <a href="https://x.com/shgt" class="social-link" target="_blank">
+                <img src="x.svg" alt="X">
+            </a>
+            <a href="https://t.me/shgt_portal" class="social-link" target="_blank">
+                <img src="telegram.svg" alt="Telegram">
+            </a>
+        </div>
     </div>
     
     <div class="hero-section">
@@ -48,17 +53,20 @@
 
     <!-- Footer -->
     <div class="footer">
-        <a href="https://x.com/shgt" class="follow-button" target="_blank">
-            <img src="x.svg" alt="X">
-            Follow X
+        <a href="#" class="buy-button" target="_blank">
+            <img src="frontofcoin.png" alt="SHGT Coin">
+            Buy $SHGT
         </a>
     </div>
 
     <!-- Audio Element -->
-    <audio id="hoverSound" preload="auto">
+    <audio id="hoverSound" preload="auto" autoplay muted>
         <source src="Carl-orff-carmina-burana-o-fortuna.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    
+    <!-- Hidden audio trigger -->
+    <button id="audioTrigger" style="position: absolute; opacity: 0; pointer-events: none;">Enable Audio</button>
 
     <script src="script.js"></script>
 </body>
