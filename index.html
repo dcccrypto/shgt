@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHGT Coin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <video autoplay muted loop id="background-video">
+            <source src="heaven.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">SHGT - Side Hoe Government Token</div>
+        <a href="https://x.com/shgt" class="social-link" target="_blank">
+            <img src="x.svg" alt="X">
+        </a>
+    </div>
+    
+    <div class="hero-section">
+        <div class="coin-container">
+            <img src="frontofcoin.png" alt="Front of Coin" class="coin-front">
+            <img src="backofcoin.png" alt="Back of Coin" class="coin-back">
+        </div>
+        <div class="contract-address">
+            <span class="ca-label">CA:</span>
+            <span class="ca-value" id="contractAddress">0x1234...abcd</span>
+            <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="https://x.com/shgt" class="follow-button" target="_blank">
+            <img src="x.svg" alt="X">
+            Follow X
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

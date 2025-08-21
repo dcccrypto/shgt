@@ -1,0 +1,300 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1.5px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-link img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.follow-button {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.follow-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.follow-button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Background video styling */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hero section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Coin container */
+.coin-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+/* Coin images */
+.coin-front, .coin-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: opacity 0.6s ease-in-out;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.coin-front {
+    opacity: 1;
+    z-index: 2;
+}
+
+.coin-back {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Hover effects */
+.coin-container:hover .coin-front {
+    opacity: 0;
+}
+
+.coin-container:hover .coin-back {
+    opacity: 1;
+}
+
+.coin-container:hover .coin-front,
+.coin-container:hover .coin-back {
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+    animation: coinGlow 3s ease-in-out infinite alternate;
+}
+
+/* Contract Address Section */
+.contract-address {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.ca-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-right: 12px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.ca-value {
+    font-family: 'Poppins', monospace;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 15px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.copy-btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.5px;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+/* Hover effect when coin is hovered */
+.coin-container:hover ~ .contract-address {
+    background: rgba(255, 0, 0, 0.15);
+    border-color: rgba(255, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(255, 0, 0, 0.2);
+}
+
+.coin-container:hover ~ .contract-address .copy-btn {
+    background: rgba(255, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.4);
+}
+
+.coin-container:hover ~ .contract-address .copy-btn:hover {
+    background: rgba(255, 0, 0, 0.4);
+}
+
+@keyframes coinGlow {
+    0% {
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3)) 
+                drop-shadow(0 0 20px rgba(255, 215, 0, 0.1))
+                brightness(1);
+    }
+    50% {
+        filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5)) 
+                drop-shadow(0 0 30px rgba(255, 215, 0, 0.3))
+                brightness(1.1);
+    }
+    100% {
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3)) 
+                drop-shadow(0 0 20px rgba(255, 215, 0, 0.1))
+                brightness(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .coin-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coin-container {
+        width: 200px;
+        height: 200px;
+    }
+}
