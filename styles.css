@@ -78,6 +78,10 @@ body, html {
 .social-link img {
     width: 25px;
     height: 25px;
+}
+
+/* Special styling for X icon to make it white */
+.social-link img[alt="X"] {
     filter: brightness(0) invert(1);
 }
 
